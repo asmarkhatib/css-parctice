@@ -10,8 +10,8 @@
     <div class="outer-row-cover">
       <div class="row" v-for="(item, index) in items" :key="index">
         <base-card>
-          <div class="count-load-font">{{ item.kg }}</div>
-          <div class="day-load-font">{{ item.day }}</div>
+          <div class="order-count-font">{{ item.kg }}</div>
+          <div class="total-order-font">{{ item.day }}</div>
         </base-card>
       </div>
     </div>
@@ -52,13 +52,19 @@ export default {
     padding: 0 40px 16px 40px;
 
     .row {
-      .count-load-font {
-        font-weight: 900;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      line-height: 1.3;
+
+      .order-count-font {
+        font-weight: 800;
         font-size: 20px;
       }
-      .day-load-font {
+      .total-order-font {
+        font-weight: 400;
         font-size: 12px;
-       
+        color: #4b5563;
       }
     }
   }
